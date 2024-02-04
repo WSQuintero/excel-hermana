@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórmulas Excel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 5px;
+            display: block;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>SUMA:</h2>
+    <code>
+        <strong>Base:</strong><br>
+        =SUMA(rango)<br><br>
+
+        <strong>rango:</strong> El rango de celdas que quieres sumar.<br><br>
+
+        <strong>Ejemplo:</strong><br>
+        =SUMA(A1:A5)
+    </code>
+
+    <!-- Puedes agregar más secciones aquí siguiendo el mismo formato -->
+
+    <h2>PROMEDIO:</h2>
+    <code>
+        <strong>Base:</strong><br>
+        =PROMEDIO(rango)<br><br>
+
+        <strong>rango:</strong> El rango de celdas del cual quieres calcular el promedio.<br><br>
+
+        <strong>Ejemplo:</strong><br>
+        =PROMEDIO(B1:B10)
+    </code>
+
+    <h2>CONTAR:</h2>
+    <code>
+        <strong>Base:</strong><br>
+        =CONTAR(rango)<br><br>
+
+        <strong>rango:</strong> El rango de celdas que quieres contar.<br><br>
+
+        <strong>Ejemplo:</strong><br>
+        =CONTAR(C1:C8)
+    </code>
+
+    <h2>SI:</h2>
+    <code>
+        <strong>Base:</strong><br>
+        =SI(condición, valor_si_verdadero, valor_si_falso)<br><br>
+
+        <strong>condición:</strong> La expresión o prueba lógica que deseas evaluar.<br>
+        <strong>valor_si_verdadero:</strong> El valor que se devuelve si la condición es verdadera.<br>
+        <strong>valor_si_falso:</strong> El valor que se devuelve si la condición es falsa.<br><br>
+
+        <strong>Ejemplo:</strong><br>
+        =SI(D1>10, "Aprobado", "Reprobado")
+    </code>
+
+    <h2>BUSCARV:</h2>
+    <code>
+        <strong>Base:</strong><br>
+        =BUSCARV(valor_a_buscar, rango_de_tabla, número_de_columna, [ordenar])<br><br>
+
+        <strong>valor_a_buscar:</strong> El valor que estás buscando en la primera columna de la tabla.<br>
+        <strong>rango_de_tabla:</strong> El rango de celdas que contiene la tabla en la que estás buscando.<br>
+        <strong>número_de_columna:</strong> El número de columna en la que se debe buscar el valor correspondiente.<br>
+        <strong>[ordenar]:</strong> Un valor opcional que indica si los datos en el rango de la tabla están ordenados. Puede ser VERDADERO o FALSO.<br><br>
+
+        <strong>Ejemplo:</strong><br>
+        =BUSCARV("Producto A", A1:H10, 3, FALSO)
+    </code>
+
+    <h2>CONCATENAR:</h2>
+    <code>
+        <strong>Base:</strong><br>
+        =CONCATENAR(texto1, [texto2], ...)<br><br>
+
+        <strong>texto1, texto2, ...:</strong> Los argumentos de texto que deseas concatenar. Puedes proporcionar varios argumentos separados por comas.<br><br>
+
+        <strong>Ejemplo:</strong><br>
+        =CONCATENAR("Hola, ", "mamá")
+    </code>
+
+    <h2>BUSCARH:</h2>
+    <code>
+        <strong>Base:</strong><br>
+        =BUSCARH(valor_a_buscar, rango_de_tabla)<br><br>
+
+        <strong>valor_a_buscar:</strong> Es el valor que estás buscando en la primera fila de la tabla.<br>
+        <strong>rango_de_tabla:</strong> Es el rango de celdas que contiene la tabla en la que estás buscando.<br><br>
+
+        <strong>Ejemplo:</strong><br>
+        =BUSCARH("Producto B", A1:H10)
+    </code>
+
+    <h2>SUMAR.SI:</h2>
+    <code>
+        <strong>Base:</strong><br>
+        =SUMAR.SI(rango, criterio)<br><br>
+
+        <strong>rango:</strong> El rango de celdas que quieres sumar.<br>
+        <strong>criterio:</strong> La condición que debe cumplir una celda para ser sumada. Puede ser un valor, una expresión o una referencia de celda.<br><br>
+
+        <strong>Ejemplo:</strong><br>
+        =SUMAR.SI(C1:C10, ">100")
+    </code>
+
+    <h2>ÍNDICE y COINCIDIR:</h2>
+    <code>
+        <strong>Base:</strong><br>
+        =ÍNDICE(rango, COINCIDIR(valor_a_buscar, rango_de_búsqueda, tipo_coincidencia), COINCIDIR(valor_a_buscar_en_columna, rango_de_columnas, tipo_coincidencia))<br><br>
+
+        <strong>rango:</strong> El rango de celdas del cual quieres recuperar los datos.<br>
+        <strong>valor_a_buscar:</strong> El valor que estás buscando en el rango de búsqueda.<br>
+        <strong>rango_de_búsqueda:</strong> El rango en el cual buscar el valor.<br>
+        <strong>tipo_coincidencia:</strong> El tipo de coincidencia que estás buscando (0 para coincidencia exacta).<br>
+        <strong>valor_a_buscar_en_columna:</strong> El valor que estás buscando en la fila de encabezados.<br>
+        <strong>rango_de_columnas:</strong> El rango que contiene los encabezados de las columnas.<br><br>
+
+        <strong>Ejemplo:</strong><br>
+        =ÍNDICE(D1:H10, COINCIDIR("Producto B", A1:A10, 0), COINCIDIR("2023", D1:H1, 0))
+    </code>
+
+    <h2>SI.ERROR:</h2>
+    <code>
+        <strong>Base:</strong><br>
+        =SI.ERROR(valor, valor_predeterminado)<br><br>
+
+        <strong>valor:</strong> La expresión o fórmula que deseas evaluar y manejar si hay un error.<br>
+        <strong>valor_predeterminado:</strong> El valor que se devuelve si hay un error.<br><br>
+
+        <strong>Ejemplo:</strong><br>
+        =SI.ERROR(BUSCARV("Producto C", A1:D10, 3, FALSO), "No disponible")
+    </code>
+
+    <h2>SUMAPRODUCTO:</h2>
+    <code>
+        <strong>Base:</strong><br>
+        =SUMAPRODUCTO(rango1, rango2)<br><br>
+
+        <strong>rango1:</strong> El primer rango de celdas.<br>
+        <strong>rango2:</strong> El segundo rango de celdas. Los valores correspondientes se multiplican y luego se suman.<br><br>
+
+        <strong>Ejemplo:</strong><br>
+        =SUMAPRODUCTO(A1:A5, B1:B5)
+    </code>
+
+    <h2>PROMEDIO.SI:</h2>
+    <code>
+        <strong>Base:</strong><br>
+        =PROMEDIO.SI(rango, criterio)<br><br>
+
+        <strong>rango:</strong> El rango de celdas del cual quieres calcular el promedio.<br>
+        <strong>criterio:</strong> La condición que debe cumplir una celda para ser incluida en el cálculo del promedio.<br><br>
+
+        <strong>Ejemplo:</strong><br>
+        =PROMEDIO.SI(A1:A10, ">50")
+    </code>
+
+    <h2>CONTAR.SI:</h2>
+    <code>
+        <strong>Base:</strong><br>
+        =CONTAR.SI(rango, criterio)<br><br>
+
+        <strong>rango:</strong> El rango de celdas que quieres contar.<br>
+        <strong>criterio:</strong> La condición que debe cumplir una celda para ser contada.<br><br>
+
+        <strong>Ejemplo:</strong><br>
+        =CONTAR.SI(B1:B8, "<0")
+    </code>
+
+    <h2>SI.CONJUNTO:</h2>
+    <code>
+        <strong>Base:</strong><br>
+        =SI.CONJUNTO(prueba_lógica, [valor_si_verdadero], [valor_si_falso])<br><br>
+
+        <strong>prueba_lógica:</strong> La expresión o prueba lógica que deseas evaluar.<br>
+        <strong>[valor_si_verdadero]:</strong> El valor que se devuelve si la prueba lógica es verdadera.<br>
+        <strong>[valor_si_falso]:</strong> El valor que se devuelve si la prueba lógica es falsa.<br><br>
+
+        <strong>Ejemplo:</strong><br>
+        =SI.CONJUNTO(D1>10, "Aprobado", "Reprobado")
+    </code>
+
+    <h2>CONCATENAR.SI:</h2>
+    <code>
+        <strong>Base:</strong><br>
+        =CONCATENAR.SI(rango, criterio, [separador])<br><br>
+
+        <strong>rango:</strong> El rango de celdas que quieres concatenar.<br>
+        <strong>criterio:</strong> La condición que debe cumplir una celda para ser incluida en la concatenación.<br>
+        <strong>[separador]:</strong> El separador que deseas entre cada valor concatenado (opcional).<br><br>
+
+        <strong>Ejemplo:</strong><br>
+        =CONCATENAR.SI(A1:A5, "Manzana", ", ")
+    </code>
+
+    <h2>MINIFS:</h2>
+    <code>
+        <strong>Base:</strong><br>
+        =MINIFS(rango_min, rango_criterio1, criterio1, [rango_criterio2, criterio2], ...)<br><br>
+
+        <strong>rango_min:</strong> El rango de celdas del cual encontrar el valor mínimo.<br>
+        <strong>rango_criterio1, rango_criterio2, ...:</strong> Los rangos en los que se evalúan los criterios.<br>
+        <strong>criterio1, criterio2, ...:</strong> Los criterios que deben cumplirse en los respectivos rangos.<br><br>
+
+        <strong>Ejemplo:</strong><br>
+        =MINIFS(B1:B10, A1:A10, "Manzana", C1:C10, ">0")
+    </code>
+
+    <h2>ÍNDICE + COINCIDIR (Búsqueda en dos dimensiones):</h2>
+    <code>
+        <strong>Base:</strong><br>
+        =ÍNDICE(rango_resultados, COINCIDIR(valor_buscado1, rango_búsqueda1, 0), COINCIDIR(valor_buscado2, rango_búsqueda2, 0))<br><br>
+
+        <strong>rango_resultados:</strong> El rango de celdas del cual deseas recuperar los datos.<br>
+        <strong>valor_buscado1, valor_buscado2:</strong> Los valores que estás buscando en los rangos de búsqueda.<br>
+        <strong>rango_búsqueda1, rango_búsqueda2:</strong> Los rangos en los que buscar los valores.<br><br>
+
+        <strong>Ejemplo:</strong><br>
+        =ÍNDICE(D1:H10, COINCIDIR("Producto C", A1:A10, 0), COINCIDIR("2023", D1:H1, 0))
+    </code>
+
+    <h2>DÍAS.LAB:</h2>
+    <code>
+        <strong>Base:</strong><br>
+        =DÍAS.LAB(fecha_inicial, fecha_final, [días_festivos])<br><br>
+
+        <strong>fecha_inicial, fecha_final:</strong> Las fechas entre las cuales deseas calcular los días laborables.<br>
+        <strong>[días_festivos]:</strong> Una lista opcional de días festivos que no se contarán como días laborables.<br><br>
+
+        <strong>Ejemplo:</strong><br>
+        =DÍAS.LAB(A1, B1, $D$1:$D$10)
+    </code>
+
+    <h2>MODA:</h2>
+    <code>
+        <strong>Base:</strong><br>
+        =MODA(rango)<br><br>
+
+        <strong>rango:</strong> El rango de celdas del cual deseas encontrar la moda.<br><br>
+
+        <strong>Ejemplo:</strong><br>
+        =MODA(C1:C20)
+    </code>
+
+    <h2>HALLAR:</h2>
+    <code>
+        <strong>Base:</strong><br>
+        =HALLAR(texto_a_buscar, texto, [núm_inicial])<br><br>
+
+        <strong>texto_a_buscar:</strong> El texto que estás buscando en el otro texto.<br>
+        <strong>texto:</strong> El texto en el que estás buscando.<br>
+        <strong>[núm_inicial]:</strong> La posición inicial de la búsqueda (opcional).<br><br>
+
+        <strong>Ejemplo:</strong><br>
+        =HALLAR("es", "Excel es poderoso")
+    </code>
+
+    <h2>HLOOKUP (Búsqueda horizontal):</h2>
+    <code>
+        <strong>Base:</strong><br>
+        =HLOOKUP(valor_buscado, rango_tabla, núm_fila, [ordenar])<br><br>
+
+        <strong>valor_buscado:</strong> El valor que estás buscando en la primera fila de la tabla.<br>
+        <strong>rango_tabla:</strong> El rango de celdas que contiene la tabla.<br>
+        <strong>núm_fila:</strong> El número de fila en la que buscar el valor correspondiente.<br>
+        <strong>[ordenar]:</strong> Un valor opcional que indica si los datos en el rango de la tabla están ordenados. Puede ser VERDADERO o FALSO.<br><br>
+
+        <strong>Ejemplo:</strong><br>
+        =HLOOKUP("Producto A", A1:H10, 3, FALSO)
+    </code>
+
+</body>
+</html>
